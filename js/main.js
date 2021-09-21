@@ -7,14 +7,10 @@ if(navigator.serviceWorker && 'PushManager' in window){
 
         //ask push notification permision
         const permission = window.Notification.requestPermission();
-        if(Notification.permission==='granted'){
-            showNotification('Hello there','This SW push notification',sw)
+        if(permission==='granted'){
+            //showNotification('Hello there','This SW push notification',sw)
             console.log('granted')
         }
     })
 }
 
-const showNotification =(title,body,sw)=>{
-    //sw.showNotification(title,body)
-    console.log('send')
-}
